@@ -31,11 +31,11 @@ const MyApp: AppType<{ session: Session | null }> = ({
           --font-nunito: ${nunito.style.fontFamily};
 				}
 			}`}</style>
-      <SessionProvider session={session}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <SessionProvider session={session}>
           <Component {...pageProps} />
-        </ThemeProvider>
-      </SessionProvider>
+        </SessionProvider>
+      </ThemeProvider>
     </>
   )
 }

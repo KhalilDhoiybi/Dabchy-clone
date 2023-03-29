@@ -5,16 +5,23 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  darkMode: ["class", '[data-theme="dark"]'],
+  darkMode: ["class"],
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: "1.5rem",
+      screens: {
+        "2xl": "1360px",
+      },
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         nunito: ["var(--font-nunito)", ...fontFamily.sans],
       },
       colors: {
-        light: {
+        costume: {
           green: "#19BC9C",
           lightGreen: "#33C3A7",
           grey: "#959094",
@@ -23,7 +30,6 @@ const config = {
           lightPink: "#E8A0C4",
           purple: "#633991",
         },
-        dark: {},
       },
       keyframes: {
         "accordion-down": {
