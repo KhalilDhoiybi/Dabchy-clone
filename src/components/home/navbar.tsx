@@ -5,6 +5,15 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import logo from "../../assets/images/logo-192x192.png"
+import { buttonVariants } from "../ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu"
 
 const Navbar = () => {
   const items = siteConfig.mainNav
@@ -22,7 +31,7 @@ const Navbar = () => {
               width={40}
               height={40}
             />
-            <span className="hidden font-semibold text-3xl font-nunito sm:inline-block">
+            <span className="hidden font-semibold text-3xl text-white font-nunito sm:inline-block">
               {siteConfig.name}
             </span>
           </Link>
@@ -48,6 +57,53 @@ const Navbar = () => {
               )}
             </nav>
           ) : null}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <div
+                className={buttonVariants({
+                  variant: "ghost",
+                  className:
+                    "-ml-4 text-base text-costume-pink dark:text-costume-pink hover:bg-costume-lightGreen/100 dark:hover:bg-costume-lightGreen/100 focus:ring-0 md:hidden cursor-pointer",
+                })}
+              >
+                <Image
+                  className="rounded-full mr-2"
+                  src={logo}
+                  alt={siteConfig.name}
+                  width={28}
+                  height={28}
+                />
+                <span className="font-bold">Menu</span>
+              </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="start"
+              sideOffset={10}
+              className="w-[300px] overflow-scroll"
+            >
+              <DropdownMenuLabel>
+                <Link href="/" className="flex items-center">
+                  <Image
+                    className="rounded-full mr-2"
+                    src={logo}
+                    alt={siteConfig.name}
+                    width={16}
+                    height={16}
+                  />
+                  {siteConfig.name}
+                </Link>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {items?.map(
+                (item, index) =>
+                  item.href && (
+                    <DropdownMenuItem key={index} asChild>
+                      <Link href={item.href}>{item.title}</Link>
+                    </DropdownMenuItem>
+                  )
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         <div></div>
       </div>
