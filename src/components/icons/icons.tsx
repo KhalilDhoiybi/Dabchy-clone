@@ -1,6 +1,7 @@
 import {
   Facebook,
   Instagram,
+  Laptop,
   Mail,
   Moon,
   Phone,
@@ -15,6 +16,7 @@ export type Icon = LucideIcon
 export const Icons = {
   sun: SunMedium,
   moon: Moon,
+  laptop: Laptop,
   twitter: Twitter,
   facebook: Facebook,
   instagram: Instagram,

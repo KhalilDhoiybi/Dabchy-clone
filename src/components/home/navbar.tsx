@@ -14,6 +14,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu"
+import { ThemeToggle } from "./home-theme-toggle"
 
 const Navbar = () => {
   const items = siteConfig.mainNav
@@ -105,7 +106,9 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <div></div>
+        <div>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )
