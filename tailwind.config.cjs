@@ -22,13 +22,19 @@ const config = {
       },
       colors: {
         costume: {
-          green: "#19BC9C",
-          lightGreen: "#33C3A7",
-          grey: "#959094",
-          pinkGrey: "#FAF6FB",
-          pink: "#f5378e",
-          lightPink: "#E8A0C4",
-          purple: "#633991",
+          light: {
+            green: "#0d9488",
+            lightGreen: "#14b8a6",
+            grey: "#959094",
+            pinkGrey: "#FAF6FB",
+            pink: "#f5378e",
+            lightPink: "#E8A0C4",
+            purple: "#633991",
+          },
+          dark: {
+            blue: "#0369a1",
+            darkBlue: "#075985",
+          },
         },
       },
       keyframes: {

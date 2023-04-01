@@ -28,8 +28,8 @@ const Navbar = () => {
       className={cn(
         "sticky top-0 z-40 w-full",
         scrollPostion > 0
-          ? "bg-costume-green shadow-md transition-all duration-500"
-          : "bg-costume-lightGreen py-4 transition-all duration-200"
+          ? "bg-costume-light-green dark:bg-costume-dark-darkBlue shadow-md transition-all duration-500"
+          : "bg-costume-light-lightGreen dark:bg-costume-dark-blue py-4 transition-all duration-200"
       )}
     >
       <div className="container flex h-20 items-center space-x-4 justify-between sm:space-x-0">
@@ -101,10 +101,10 @@ const Navbar = () => {
                     href={item.href}
                     onClick={() => SetSelectedItem(index)}
                     className={cn(
-                      "flex items-center text-2 font-semibold hover:text-costume-lightPink text-slate-100 sm:text-lg",
+                      "flex items-center text-2 font-semibold hover:text-costume-light-lightPink text-slate-100 sm:text-lg",
                       item.disabled && "cursor-not-allowed opacity-80",
                       selectedItem === index &&
-                        "underline underline-offset-8 decoration-2 text-costume-pink"
+                        "underline underline-offset-8 decoration-2 text-costume-light-pink"
                     )}
                   >
                     {item.title}
