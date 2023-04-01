@@ -14,7 +14,7 @@ interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "Dabchy",
   description:
-    "Achat et vente de vêtements en ligne en Tunisie ! Dabchy.com est le 1er site de vide-dressing en Tunisie.",
+    "Online purchase and sale of clothes in Tunisia! Dabchy.com is the 1st online marketplace for second-hand clothing in Tunisia.",
   mainNav: [
     {
       title: "Home",

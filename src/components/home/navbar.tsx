@@ -95,7 +95,7 @@ const Navbar = () => {
                       "flex items-center text-2 font-semibold hover:text-costume-lightPink text-slate-100 sm:text-lg",
                       item.disabled && "cursor-not-allowed opacity-80",
                       selectedItem === index &&
-                        "underline underline-offset-2 decoration-2 text-costume-pink"
+                        "underline underline-offset-8 decoration-2 text-costume-pink"
                     )}
                   >
                     {item.title}

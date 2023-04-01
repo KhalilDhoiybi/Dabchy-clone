@@ -3,6 +3,7 @@ import {
   Instagram,
   Laptop,
   Mail,
+  MessageCircle,
   Moon,
   Phone,
   SunMedium,
@@ -22,6 +23,7 @@ export const Icons = {
   instagram: Instagram,
   mail: Mail,
   phone: Phone,
+  message: MessageCircle,
   apple: (props: LucideProps) => (
     <svg
       fill="#000000"
