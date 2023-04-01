@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 
 const useScroll = (): number => {
-  const [scrollPosition, setScrollPosition] = useState<number>(
-    window.pageYOffset
-  )
+  const [scrollPosition, setScrollPosition] = useState<number>(0)
 
   const handleScroll = (): void => {
     const position = window.pageYOffset
@@ -11,7 +9,9 @@ const useScroll = (): number => {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true })
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll, { passive: true })
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScroll)

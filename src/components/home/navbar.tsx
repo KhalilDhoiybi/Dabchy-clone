@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import useScroll from "@/hooks/useScroll"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -20,9 +21,17 @@ import { ThemeToggle } from "./home-theme-toggle"
 const Navbar = () => {
   const items = siteConfig.mainNav
   const [selectedItem, SetSelectedItem] = useState(0)
+  const scrollPostion = useScroll()
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-costume-green">
+    <header
+      className={cn(
+        "sticky top-0 z-40 w-full",
+        scrollPostion > 0
+          ? "bg-costume-green shadow-md transition-all duration-500"
+          : "bg-costume-lightGreen py-4 transition-all duration-200"
+      )}
+    >
       <div className="container flex h-20 items-center space-x-4 justify-between sm:space-x-0">
         <div className="flex gap-6">
           <Link href="/" className="hidden items-center space-x-2 md:flex">
