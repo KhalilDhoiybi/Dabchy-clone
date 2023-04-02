@@ -50,6 +50,7 @@ const Navbar = () => {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="homeNav"
+                size="sm"
                 className="-ml-4 text-base focus:ring-0 md:hidden"
               >
                 <Image
