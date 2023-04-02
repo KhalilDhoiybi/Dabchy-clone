@@ -27,7 +27,7 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        <div className="container lg:h-fit overflow-hidden">
+        <div className="container pt-12 lg:pt-0 -rotate-12">
           <Image
             className="mx-auto"
             src={iphonex}

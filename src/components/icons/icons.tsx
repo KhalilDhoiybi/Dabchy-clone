@@ -1,4 +1,5 @@
 import {
+  Download,
   Facebook,
   Instagram,
   Laptop,
@@ -6,8 +7,10 @@ import {
   MessageCircle,
   Moon,
   Phone,
+  Shirt,
   SunMedium,
   Twitter,
+  User,
   type Icon as LucideIcon,
   type LucideProps,
 } from "lucide-react"
@@ -24,6 +27,10 @@ export const Icons = {
   mail: Mail,
   phone: Phone,
   message: MessageCircle,
+  user: User,
+  shirt: Shirt,
+  download: Download,
+
   apple: (props: LucideProps) => (
     <svg
       fill="#000000"

@@ -2,6 +2,7 @@ import type { NextPage } from "next"
 import Head from "next/head"
 
 import HeroSection from "@/components/home/hero-section"
+import MileStoneSection from "@/components/home/milestone-section"
 import Navbar from "@/components/home/navbar"
 
 const Home: NextPage = () => {
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <MileStoneSection />
       </main>
     </>
   )
