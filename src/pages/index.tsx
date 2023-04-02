@@ -4,6 +4,7 @@ import Head from "next/head"
 import HeroSection from "@/components/home/hero-section"
 import MileStoneSection from "@/components/home/milestone-section"
 import Navbar from "@/components/home/navbar"
+import ShoppingSection from "@/components/home/shopping-section"
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       <main>
         <HeroSection />
         <MileStoneSection />
+        <ShoppingSection />
       </main>
     </>
   )

@@ -2,7 +2,7 @@ import { Icons } from "../icons/icons"
 
 const MileStoneSection = () => {
   return (
-    <section className="relative bg-white dark:bg-slate-900 -mt-52 lg:mt-0">
+    <section className="relative bg-white dark:bg-slate-800 -mt-52 lg:mt-0">
       <div className="container md:flex justify-between items-center px-24 space-y-12 py-12 md:py-12 md:space-y-0">
         <div className="flex flex-col gap-4 items-center">
           <Icons.user className="w-[130px] h-[80px]" />
